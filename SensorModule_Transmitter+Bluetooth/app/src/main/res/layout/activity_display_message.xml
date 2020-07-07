@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This file is used to set up the graphical user interface of the display message activity -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DisplayMessageActivity">
+
+    <Button
+        android:id="@+id/buttonPrint"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dip"
+        android:text="Print the table" />
+
+
+    <LinearLayout
+        android:layout_below="@id/buttonPrint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+        <ScrollView
+            android:id="@+id/layout"
+            android:layout_height="match_parent"
+            android:scrollbars="horizontal|vertical"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dip"
+            android:scrollbarStyle="outsideInset"
+            android:fillViewport="true">
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalView"
+                android:layout_height="wrap_content"
+                android:scrollbars="horizontal|vertical"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="5dip">
+
+                <TableLayout
+                    android:id="@+id/table_layout_table"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:stretchColumns="*"
+                    xmlns:android="http://schemas.android.com/apk/res/android">
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_column="0"
+                            android:text="Date"
+                            android:layout_margin="10dip" />
+                        <TextView
+                            android:layout_column="1"
+                            android:text="Message"
+                            android:layout_margin="10dip" />
+
+                        <TextView
+                            android:layout_column="2"
+                            android:text="Throughput [ms]"
+                            android:layout_margin="10dip" />
+                        <TextView
+                            android:layout_column="3"
+                            android:text="Goodput [ms]"
+                            android:layout_margin="10dip" />
+
+                        <TextView
+                            android:layout_column="4"
+                            android:text="Goodput/CountOfPictures [ms]"
+                            android:layout_margin="10dip" />
+
+                        <TextView
+                            android:layout_column="5"
+                            android:text="Time/Image [ms]:"
+                            android:layout_margin="10dip" />
+
+                        <TextView
+                            android:layout_column="6"
+                            android:text="Time Idle after Image [ms]:"
+                            android:layout_margin="10dip" />
+
+                        <TextView
+                            android:layout_column="7"
+                            android:text="Total Time/Worker-Thread [ms]:"
+                            android:layout_margin="10dip" />
+
+                        <TextView
+                            android:layout_column="8"
+                            android:text="ROI [ms]"
+                            android:layout_margin="10dip" />
+
+                        <TextView
+                            android:layout_column="9"
+                            android:text="1Dim [ms]"
+                            android:layout_margin="10dip" />
+
+                        <TextView
+                            android:layout_column="10"
+                            android:text="Thresh [ms]"
+                            android:layout_margin="10dip" />
+
+                        <TextView
+                            android:layout_column="11"
+                            android:text="Down [ms]"
+                            android:layout_margin="10dip" />
+
+                        <TextView
+                            android:layout_column="12"
+                            android:text="Decode [ms]"
+                            android:layout_margin="10dip" />
+
+                        <TextView
+                            android:layout_column="13"
+                            android:text="Saving [ms]"
+                            android:layout_margin="10dip" />
+
+
+
+                    </TableRow>
+
+                </TableLayout>
+            </HorizontalScrollView>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>
+
